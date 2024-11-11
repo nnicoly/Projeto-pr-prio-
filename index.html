@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Perfumes Importados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Perfumes Importados</h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#carrinho">Carrinho</a>
+    </nav>
+  </header>
+
+  <section id="home" class="banner">
+    <h2>Bem-vindo à nossa Loja de Perfumes</h2>
+    <p>Encontre os melhores perfumes importados com preços especiais!</p>
+  </section>
+
+  <section id="produtos" class="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="produto-container">
+      <!-- Card do produto -->
+      <div class="produto" data-nome="Perfume 1" data-preco="350">
+        <img src="img/perfume1.jpg" alt="Perfume 1">
+        <h3>Perfume 1</h3>
+        <p>Preço: R$ 350,00</p>
+        <button onclick="adicionarAoCarrinho('Perfume 1', 350)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto" data-nome="Perfume 2" data-preco="400">
+        <img src="img/perfume2.jpg" alt="Perfume 2">
+        <h3>Perfume 2</h3>
+        <p>Preço: R$ 400,00</p>
+        <button onclick="adicionarAoCarrinho('Perfume 2', 400)">Adicionar ao Carrinho</button>
+      </div>
+      <!-- Mais produtos podem ser adicionados seguindo o mesmo padrão -->
+    </div>
+  </section>
+
+  <section id="carrinho" class="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <div id="lista-carrinho"></div>
+    <p id="total">Total: R$ 0,00</p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
